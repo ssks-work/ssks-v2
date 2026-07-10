@@ -1,0 +1,99 @@
+:root {
+  --ssks-red: #df2e38;
+  --ssks-dark: #1d2433;
+  --ssks-light: #f7f7f8;
+}
+
+body {
+  color: var(--ssks-dark);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+
+.section-padding {
+  padding-block: 6rem;
+}
+
+.hero {
+  min-height: 720px;
+}
+
+.hero-label,
+.section-label {
+  color: var(--ssks-red);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.btn-brand {
+  color: #fff;
+  background: var(--ssks-red);
+  border-color: var(--ssks-red);
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+  color: #fff;
+  background: #bd202a;
+  border-color: #bd202a;
+}
+
+.hero-visual {
+  display: grid;
+  min-height: 420px;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  color: #fff;
+  background:
+    radial-gradient(circle at 70% 30%, rgb(223 46 56 / 65%), transparent 35%),
+    linear-gradient(135deg, #111, #282020);
+  box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 12%);
+}
+
+.service-card {
+  padding: 2rem;
+  border: 1px solid #ececef;
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.service-card-main {
+  color: #fff;
+  border: 0;
+  background:
+    radial-gradient(circle at 85% 20%, rgb(223 46 56 / 45%), transparent 35%),
+    #161616;
+}
+
+.about-placeholder {
+  display: grid;
+  min-height: 420px;
+  place-items: center;
+  border-radius: 1.25rem;
+  color: #777;
+  background: #ececef;
+}
+
+.contact-section {
+  background:
+    radial-gradient(circle at 65% 50%, rgb(223 46 56 / 40%), transparent 28%),
+    #171717;
+}
+
+@media (max-width: 991.98px) {
+  .section-padding {
+    padding-block: 4rem;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-visual,
+  .about-placeholder {
+    min-height: 320px;
+  }
+}
