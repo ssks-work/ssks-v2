@@ -549,6 +549,232 @@ a {
   background: var(--ssks-background);
 }
 
+/* =========================
+   AI Solutions
+========================= */
+
+.ai-solutions-section {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(5rem, 9vw, 8rem);
+  background:
+    linear-gradient(
+      180deg,
+      #f7f7f9 0%,
+      #fff 100%
+    );
+}
+
+.ai-solutions-section::before {
+  position: absolute;
+  top: -12rem;
+  left: -12rem;
+  width: 32rem;
+  height: 32rem;
+  content: "";
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgb(229 43 50 / 7%),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.ai-solution-list {
+  position: relative;
+  z-index: 1;
+}
+
+.ai-solution-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 2rem;
+  border: 1px solid rgb(20 25 35 / 8%);
+  border-radius: 1.25rem;
+  background: rgb(255 255 255 / 90%);
+  box-shadow: 0 1rem 2.4rem rgb(20 25 35 / 5%);
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.ai-solution-card::after {
+  position: absolute;
+  right: -3.5rem;
+  bottom: -3.5rem;
+  width: 8rem;
+  height: 8rem;
+  content: "";
+  border: 1px solid rgb(229 43 50 / 9%);
+  border-radius: 50%;
+  transition:
+    border-color 0.25s ease,
+    transform 0.35s ease;
+}
+
+.ai-solution-card:hover {
+  border-color: rgb(229 43 50 / 25%);
+  box-shadow: 0 1.4rem 3rem rgb(20 25 35 / 9%);
+  transform: translateY(-6px);
+}
+
+.ai-solution-card:hover::after {
+  border-color: rgb(229 43 50 / 22%);
+  transform: scale(1.25);
+}
+
+.ai-solution-icon {
+  display: grid;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 1.4rem;
+  place-items: center;
+  color: var(--ssks-white);
+  border-radius: 1rem;
+  background:
+    linear-gradient(
+      135deg,
+      var(--ssks-red),
+      var(--ssks-red-dark)
+    );
+  box-shadow: 0 0.75rem 1.5rem rgb(229 43 50 / 22%);
+}
+
+.ai-solution-icon svg {
+  width: 27px;
+  height: 27px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ai-solution-category {
+  margin-bottom: 0.55rem;
+  color: var(--ssks-red);
+  font-size: 0.63rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.ai-solution-title {
+  margin-bottom: 1rem;
+  color: var(--ssks-black);
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.ai-solution-text {
+  margin-bottom: 1.4rem;
+  color: var(--ssks-gray);
+  font-size: 0.87rem;
+  line-height: 1.9;
+}
+
+.ai-solution-points {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding: 1.2rem 0 0;
+  border-top: 1px solid var(--ssks-border);
+  list-style: none;
+}
+
+.ai-solution-points li {
+  position: relative;
+  margin-bottom: 0.55rem;
+  padding-left: 1.15rem;
+  color: var(--ssks-text);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.ai-solution-points li:last-child {
+  margin-bottom: 0;
+}
+
+.ai-solution-points li::before {
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 0.35rem;
+  height: 0.35rem;
+  content: "";
+  border-radius: 50%;
+  background: var(--ssks-red);
+  transform: translateY(-50%);
+}
+
+
+/* =========================
+   AI Solutions Message
+========================= */
+
+.ai-solutions-message {
+  position: relative;
+  margin-top: 4.5rem;
+  padding: clamp(2rem, 4vw, 3.2rem);
+  overflow: hidden;
+  border: 1px solid rgb(229 43 50 / 15%);
+  border-radius: 1.5rem;
+  background:
+    linear-gradient(
+      135deg,
+      var(--ssks-white),
+      var(--ssks-red-light)
+    );
+}
+
+.ai-solutions-message::after {
+  position: absolute;
+  top: -5rem;
+  right: -4rem;
+  width: 15rem;
+  height: 15rem;
+  content: "";
+  border: 1px solid rgb(229 43 50 / 10%);
+  border-radius: 50%;
+}
+
+.ai-solutions-message .row {
+  position: relative;
+  z-index: 1;
+}
+
+.ai-solutions-message-label {
+  margin-bottom: 0.55rem;
+  color: var(--ssks-red);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+}
+
+.ai-solutions-message-title {
+  margin-bottom: 0.65rem;
+  color: var(--ssks-black);
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.ai-solutions-message-text {
+  max-width: 710px;
+  margin-bottom: 0;
+  color: var(--ssks-gray);
+  font-size: 0.88rem;
+  line-height: 1.9;
+}
+
+.ai-solutions-message .btn {
+  min-width: 225px;
+  padding: 0.9rem 1.4rem;
+  font-size: 0.85rem;
+}
 
 /* =========================
    Tablet
@@ -729,6 +955,24 @@ a {
   }
 
   .challenge-solution .btn-brand {
+    width: 100%;
+  }
+
+    .ai-solution-card {
+    padding: 1.6rem;
+  }
+
+  .ai-solution-icon {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .ai-solutions-message {
+    margin-top: 3rem;
+    padding: 2rem 1.4rem;
+  }
+
+  .ai-solutions-message .btn {
     width: 100%;
   }
 }
