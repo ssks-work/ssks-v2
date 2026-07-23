@@ -331,26 +331,208 @@ a {
 
 
 /* =========================
-   Temporary
+   Section Heading
 ========================= */
 
-.temporary-section {
-  padding-block: 8rem;
-  background: var(--ssks-white);
+.section-heading {
+  max-width: 760px;
+  margin-inline: auto;
+  margin-bottom: 4rem;
 }
 
 .section-label {
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.75rem;
   color: var(--ssks-red);
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.18em;
 }
 
-.temporary-section h2 {
+.section-title {
+  margin-bottom: 1.25rem;
+  color: var(--ssks-black);
+  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: -0.035em;
+}
+
+.section-description {
+  margin-bottom: 0;
+  color: var(--ssks-gray);
+  font-size: 0.95rem;
+  line-height: 2;
+}
+
+
+/* =========================
+   Challenges
+========================= */
+
+.challenges-section {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(5rem, 9vw, 8rem);
+  background: var(--ssks-white);
+}
+
+.challenges-section::before {
+  position: absolute;
+  top: 6rem;
+  right: -10rem;
+  width: 28rem;
+  height: 28rem;
+  content: "";
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgb(229 43 50 / 5%),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.challenge-list {
+  position: relative;
+  z-index: 1;
+}
+
+.challenge-card {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border: 1px solid var(--ssks-border);
+  border-radius: 1.2rem;
+  background: var(--ssks-white);
+  box-shadow: 0 0.8rem 2rem rgb(20 25 35 / 4%);
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.challenge-card::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  content: "";
+  background: var(--ssks-red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.challenge-card:hover {
+  border-color: rgb(229 43 50 / 28%);
+  box-shadow: 0 1.2rem 2.8rem rgb(20 25 35 / 8%);
+  transform: translateY(-5px);
+}
+
+.challenge-card:hover::before {
+  transform: scaleX(1);
+}
+
+.challenge-number {
+  position: absolute;
+  top: 1.35rem;
+  right: 1.5rem;
+  color: #ececef;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.challenge-icon {
+  display: grid;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-bottom: 1.5rem;
+  place-items: center;
+  color: var(--ssks-red);
+  border-radius: 0.9rem;
+  background: var(--ssks-red-light);
+}
+
+.challenge-title {
   margin-bottom: 1rem;
   color: var(--ssks-black);
+  font-size: 1.12rem;
   font-weight: 800;
+  line-height: 1.65;
+}
+
+.challenge-text {
+  margin-bottom: 0;
+  color: var(--ssks-gray);
+  font-size: 0.88rem;
+  line-height: 1.9;
+}
+
+.challenge-solution {
+  position: relative;
+  margin-top: 4.5rem;
+  padding: clamp(2.5rem, 5vw, 4.5rem);
+  overflow: hidden;
+  border-radius: 1.5rem;
+  color: var(--ssks-white);
+  background:
+    radial-gradient(
+      circle at 78% 35%,
+      rgb(229 43 50 / 45%),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #111, #242126);
+  box-shadow: 0 1.5rem 3.5rem rgb(17 17 17 / 14%);
+}
+
+.challenge-solution::before {
+  position: absolute;
+  top: -5rem;
+  left: -5rem;
+  width: 15rem;
+  height: 15rem;
+  content: "";
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-radius: 50%;
+}
+
+.challenge-solution > * {
+  position: relative;
+  z-index: 1;
+}
+
+.challenge-solution-label {
+  margin-bottom: 0.75rem;
+  color: rgb(255 255 255 / 62%);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.challenge-solution-title {
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.challenge-solution-title span {
+  color: #ff6c72;
+}
+
+.challenge-solution-text {
+  margin-bottom: 2rem;
+  color: rgb(255 255 255 / 72%);
+  font-size: 0.9rem;
+  line-height: 2;
+}
+
+.challenge-solution .btn-brand {
+  min-width: 210px;
+  padding: 0.9rem 1.6rem;
 }
 
 
@@ -452,6 +634,43 @@ a {
 
   .temporary-section {
     padding-block: 5rem;
+  }
+
+    .section-heading {
+    margin-bottom: 2.75rem;
+    text-align: left !important;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-description br {
+    display: none;
+  }
+
+  .challenge-card {
+    padding: 1.6rem;
+  }
+
+  .challenge-number {
+    top: 1.2rem;
+    right: 1.25rem;
+    font-size: 1.7rem;
+  }
+
+  .challenge-solution {
+    margin-top: 3rem;
+    padding: 2.25rem 1.4rem;
+    text-align: left !important;
+  }
+
+  .challenge-solution-text br {
+    display: none;
+  }
+
+  .challenge-solution .btn-brand {
+    width: 100%;
   }
 }
 
