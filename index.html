@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta
     name="description"
-    content="SSKSは、AI・Web・EC・業務改善を組み合わせ、中小企業のAI活用を伴走支援します。"
+    content="SSKSは、AI・Web・EC・業務改善を組み合わせ、中小企業のAI活用を伴走支援します。福岡県を拠点に九州全域への訪問と全国オンライン対応を行っています。"
   >
 
   <title>SSKS｜AI Strategy Partner</title>
@@ -13,156 +14,212 @@
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
     rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
   >
+
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-  <header class="border-bottom">
-    <nav class="navbar navbar-expand-lg bg-white">
-      <div class="container py-2">
-        <a class="navbar-brand fw-bold" href="./">
-          SSKS
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+
+        <a
+          class="navbar-brand"
+          href="./"
+          aria-label="SSKS トップページ"
+        >
+          <img
+            class="header-logo"
+            src="./assets/img/logo.png"
+            alt="SSKS AI Strategy Partner"
+            width="190"
+            height="61"
+          >
         </a>
 
         <button
-          class="navbar-toggler"
+          class="navbar-toggler border-0 shadow-none"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#globalNav"
-          aria-controls="globalNav"
+          data-bs-target="#globalNavigation"
+          aria-controls="globalNavigation"
           aria-expanded="false"
-          aria-label="ナビゲーションを開閉"
+          aria-label="メニューを開閉する"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="globalNav">
-          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+        <div
+          class="collapse navbar-collapse"
+          id="globalNavigation"
+        >
+          <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item">
-              <a class="nav-link" href="#services">サービス</a>
+              <a class="nav-link" href="#challenges">
+                お悩み
+              </a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link" href="#about">SSKSについて</a>
+              <a class="nav-link" href="#services">
+                サービス
+              </a>
             </li>
+
             <li class="nav-item">
-              <a class="btn btn-brand" href="#contact">無料相談</a>
+              <a class="nav-link" href="#about">
+                SSKSについて
+              </a>
+            </li>
+
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-brand header-cta" href="#contact">
+                無料相談する
+              </a>
             </li>
           </ul>
         </div>
+
       </div>
     </nav>
   </header>
 
+
   <main>
-    <section class="hero d-flex align-items-center">
-      <div class="container py-5">
+
+    <!-- First View -->
+    <section class="hero">
+      <div class="container">
         <div class="row align-items-center g-5">
+
           <div class="col-lg-6">
-            <p class="hero-label mb-3">AI × Web × EC × Automation</p>
+            <div class="hero-content">
 
-            <h1 class="display-3 fw-bold lh-sm mb-4">
-              AIを、もっと<br>
-              人のために。
-            </h1>
+              <p class="brand-name mb-2">
+                SSKS
+              </p>
 
-            <p class="lead text-secondary mb-4">
-              Web制作・EC運営・生成AI。現場を知るWebディレクターが、
-              成果につながるAI活用を伴走支援します。
-            </p>
+              <p class="hero-category mb-4">
+                AI × Web × EC × Automation
+              </p>
 
-            <div class="d-flex flex-column flex-sm-row gap-3">
-              <a class="btn btn-brand btn-lg" href="#contact">
-                無料相談する
-              </a>
-              <a class="btn btn-outline-dark btn-lg" href="#services">
-                サービスを見る
-              </a>
+              <h1 class="hero-title">
+                AIを、もっと人のために。
+              </h1>
+
+              <p class="hero-intro">
+                AIを導入するだけでは、会社は変わりません。
+              </p>
+
+              <p class="hero-description">
+                Web制作・EC運営・生成AI。<br class="d-none d-sm-inline">
+                現場を知るWebディレクターだからできる、
+                成果につながるAI活用を伴走支援します。
+              </p>
+
+              <div class="hero-buttons">
+                <a class="btn btn-brand btn-lg" href="#contact">
+                  無料相談する
+                </a>
+
+                <a class="btn btn-outline-brand btn-lg" href="#services">
+                  サービスを見る
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+
             </div>
           </div>
 
           <div class="col-lg-6">
-            <div class="hero-visual">
-              <span>SSKS v2</span>
+            <div class="hero-image-wrap">
+              <img
+                class="hero-image"
+                src="./assets/img/hero-image.jpg"
+                alt="AIとデータネットワークをイメージしたビジュアル"
+                width="760"
+                height="620"
+              >
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <section id="services" class="section-padding bg-light">
+
+    <!-- Area Features -->
+    <section
+      class="area-features"
+      aria-label="対応エリア"
+    >
       <div class="container">
-        <div class="text-center mb-5">
-          <p class="section-label">SERVICES</p>
-          <h2 class="fw-bold">メインサービス</h2>
-        </div>
+        <div class="row g-0">
 
-        <div class="row g-4">
-          <div class="col-md-6">
-            <article class="service-card service-card-main h-100">
-              <p class="small fw-bold">MAIN SERVICE</p>
-              <h3>AI活用伴走支援</h3>
-              <p class="mb-0">
-                AIを導入して終わりではなく、業務への定着と改善まで継続して支援します。
-              </p>
-            </article>
+          <div class="col-md-4">
+            <div class="area-feature">
+              <span class="area-feature-icon" aria-hidden="true">
+                ●
+              </span>
+
+              <span class="area-feature-text">
+                福岡県を拠点
+              </span>
+            </div>
           </div>
 
-          <div class="col-md-6">
-            <article class="service-card h-100">
-              <h3>Web・EC支援</h3>
-              <p class="mb-0">
-                Web制作、EC運営、SNS、業務効率化を横断して成果につなげます。
-              </p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
+          <div class="col-md-4">
+            <div class="area-feature">
+              <span class="area-feature-icon" aria-hidden="true">
+                ●
+              </span>
 
-    <section id="about" class="section-padding">
-      <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-5">
-            <div class="about-placeholder">PROFILE PHOTO</div>
+              <span class="area-feature-text">
+                九州全域訪問対応
+              </span>
+            </div>
           </div>
-          <div class="col-lg-7">
-            <p class="section-label">ABOUT</p>
-            <h2 class="fw-bold mb-4">SSKSについて</h2>
-            <p>
-              SSKSは「娑婆存故我存」という造語に由来します。
-              「この世界があるから、私が存在する」という考えを軸に、
-              AIを人と企業のために活用します。
-            </p>
-            <p class="mb-0">
-              福岡県を拠点に、九州全域への訪問と全国オンライン対応を行います。
-            </p>
+
+          <div class="col-md-4">
+            <div class="area-feature">
+              <span class="area-feature-icon" aria-hidden="true">
+                ●
+              </span>
+
+              <span class="area-feature-text">
+                オンライン全国対応
+              </span>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <section id="contact" class="contact-section section-padding text-white">
+
+    <!-- 次回以降の仮セクション -->
+    <section id="challenges" class="temporary-section">
       <div class="container text-center">
-        <h2 class="fw-bold mb-3">AIを、もっと人のために。</h2>
-        <p class="mb-4">まずは現在の課題をお聞かせください。</p>
-        <a class="btn btn-light btn-lg" href="mailto:rintaro@ssks.work">
-          無料相談はこちら
-        </a>
+        <p class="section-label">YOUR CHALLENGES</p>
+        <h2>こんなお悩みありませんか</h2>
+        <p>次の工程で実装します。</p>
       </div>
     </section>
+
   </main>
 
-  <footer class="py-4 bg-black text-white">
-    <div class="container d-flex justify-content-between">
-      <small>SSKS</small>
-      <small>&copy; SSKS</small>
-    </div>
-  </footer>
 
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
   ></script>
+
   <script src="./assets/js/main.js"></script>
 </body>
 </html>
