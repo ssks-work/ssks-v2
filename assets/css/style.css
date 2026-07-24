@@ -13,9 +13,11 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: var(--header-height); }
+html { overflow-x: clip; scroll-behavior: smooth; scroll-padding-top: var(--header-height); }
 body {
+  width: 100%;
   margin: 0;
+  overflow-x: clip;
   color: var(--ink);
   background: var(--white);
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
@@ -24,7 +26,7 @@ body {
   letter-spacing: normal;
   -webkit-font-smoothing: antialiased;
 }
-img, svg { max-width: 100%; }
+img, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 button, input, textarea { font: inherit; }
 .site-container { width: min(100%, calc(var(--container) + var(--side) * 2)); padding-inline: var(--side); }
@@ -100,7 +102,7 @@ button, input, textarea { font: inherit; }
 
 .bridge-section { padding: clamp(8rem,16vw,15rem) 0; background: var(--light-gray); }
 .bridge-copy { max-width: 980px; margin-left: auto; }
-.bridge-title span { color: var(--red); }
+.bridge-title .accent-red { color: var(--red); }
 
 .services-section { padding: clamp(7rem,12vw,11rem) 0; }
 .section-header { display: grid; grid-template-columns: minmax(0,1.4fr) minmax(280px,.6fr); gap: 4rem; align-items: end; margin-bottom: clamp(4rem,8vw,7rem); }
@@ -176,11 +178,27 @@ button, input, textarea { font: inherit; }
 }
 
 @media (max-width: 767.98px) {
-  .hero { min-height: 100svh; align-items: flex-start; padding-top: calc(var(--header-height) + 3rem); padding-bottom: 42vh; background-color: #fff; background-image: linear-gradient(180deg, #fff 0%, rgba(255,255,255,.98) 34%, rgba(255,255,255,.64) 53%, rgba(255,255,255,.05) 76%), url("../img/hero-mobile.webp"); background-position: center bottom; background-size: 100% auto; background-repeat: no-repeat; }
-  .hero::after { height: 8%; }
-  .hero-content { max-width: 100%; }
-  .hero-title { font-size: clamp(2.75rem, 12.5vw, 4.7rem); line-height: 1.16; }
-  .hero-copy { max-width: 100%; font-size: clamp(1.02rem, 4.4vw, 1.18rem); line-height: 1.8; }
+  .site-container { width: 100%; max-width: 100%; }
+  .site-header .site-container { padding-inline: max(1.25rem, env(safe-area-inset-left)) max(1.25rem, env(safe-area-inset-right)); }
+  .hero {
+    min-height: max(760px, 100svh);
+    align-items: flex-start;
+    padding-top: calc(var(--header-height) + clamp(4.25rem, 11vh, 7rem));
+    padding-bottom: 4rem;
+    background-color: #fff;
+    background-image:
+      linear-gradient(180deg, #fff 0%, rgba(255,255,255,.98) 37%, rgba(255,255,255,.88) 53%, rgba(255,255,255,.28) 72%, rgba(255,255,255,0) 88%),
+      url("../img/hero-mobile.webp");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .hero::after { height: 6%; }
+  .hero-content { width: 100%; max-width: 34rem; }
+  .hero-title { max-width: 100%; font-size: clamp(2.65rem, 10.8vw, 4.1rem); line-height: 1.17; }
+  .hero-title .title-line { white-space: nowrap; }
+  .hero-copy { max-width: 32rem; font-size: clamp(1.02rem, 4.25vw, 1.18rem); line-height: 1.8; }
+  .hero-actions { max-width: 32rem; }
   .hero-scroll { display: none; }
   .area-grid { grid-template-columns: 1fr; }
   .area-item, .area-item:first-child { padding: 1.4rem 0; border-right: 0; border-bottom: 1px solid var(--line); }
@@ -201,15 +219,15 @@ button, input, textarea { font: inherit; }
 
 @media (max-width: 575.98px) {
   .header-logo { width: 124px; }
-  .hero-actions { align-items: flex-start; flex-direction: column; }
-  .button { width: 100%; }
+  .hero-actions { width: 100%; align-items: flex-start; flex-direction: column; }
+  .hero-actions .button { width: min(100%, 24rem); }
   .statement-title, .section-title, .bridge-title { font-size: clamp(2.45rem, 11.5vw, 3.8rem); }
   .service-item:hover { padding-inline: 0; }
   .contact-copy h2 { font-size: clamp(2.45rem, 11.5vw, 3.8rem); }
 }
 
 @media (max-width: 390px) {
-  .hero-title { font-size: 11.6vw; }
+  .hero-title { font-size: 10.5vw; }
   .hero-copy br { display: none; }
   .statement-title, .section-title, .bridge-title, .contact-copy h2 { font-size: 10.8vw; }
 }
