@@ -3,853 +3,254 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta
-    name="description"
-    content="SSKSは、AI・Web・EC・業務改善を組み合わせ、中小企業のAI活用を伴走支援します。福岡県を拠点に九州全域への訪問と全国オンライン対応を行っています。"
-  >
+  <meta name="description" content="SSKSは、AI・Web・EC・業務改善を組み合わせ、中小企業のAI活用を伴走支援します。福岡県を拠点に九州全域への訪問と全国オンライン対応を行っています。">
+  <meta name="theme-color" content="#ffffff">
 
   <title>SSKS｜AI Strategy Partner</title>
 
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-    crossorigin="anonymous"
-  >
-
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <link
-    rel="preload"
-    as="image"
-    href="./assets/img/ssks-hero.webp"
-    type="image/webp"
-  >
+  <link rel="preload" as="image" href="./assets/img/hero.webp" type="image/webp">
 </head>
 
 <body>
-
-  <!-- Header -->
-  <header class="site-header">
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container">
-
-        <a
-          class="navbar-brand"
-          href="./"
-          aria-label="SSKS トップページ"
-        >
-          <img
-            class="header-logo"
-            src="./assets/img/logo.png"
-            alt="SSKS AI Strategy Partner"
-            width="190"
-            height="61"
-          >
+  <header class="site-header" data-header>
+    <nav class="navbar navbar-expand-lg" aria-label="メインナビゲーション">
+      <div class="container-fluid site-container">
+        <a class="navbar-brand" href="#top" aria-label="SSKS トップページ">
+          <img class="header-logo" src="./assets/img/logo.png" alt="SSKS AI Strategy Partner" width="190" height="61">
         </a>
 
-        <button
-          class="navbar-toggler border-0 shadow-none"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#globalNavigation"
-          aria-controls="globalNavigation"
-          aria-expanded="false"
-          aria-label="メニューを開閉する"
-        >
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#globalNavigation" aria-controls="globalNavigation" aria-expanded="false" aria-label="メニューを開閉する">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
         </button>
 
-        <div
-          class="collapse navbar-collapse"
-          id="globalNavigation"
-        >
+        <div class="collapse navbar-collapse" id="globalNavigation">
           <ul class="navbar-nav ms-auto align-items-lg-center">
-            <li class="nav-item">
-              <a class="nav-link" href="#challenges">
-                お悩み
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#services">
-                サービス
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#about">
-                SSKSについて
-              </a>
-            </li>
-
-            <li class="nav-item ms-lg-3">
-              <a class="btn btn-brand header-cta" href="#contact">
-                無料相談する
-              </a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="#challenges">課題</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">サービス</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">SSKSについて</a></li>
+            <li class="nav-item ms-lg-3"><a class="header-contact" href="#contact">相談する <span aria-hidden="true">→</span></a></li>
           </ul>
         </div>
-
       </div>
     </nav>
   </header>
 
-
-  <main>
-
-    <!-- First View -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-
-      <p class="brand-name mb-2">
-        SSKS
-      </p>
-
-      <p class="hero-category mb-4">
-        AI × Web × EC × Automation
-      </p>
-
-      <h1 class="hero-title">
-        AIを、もっと人のために。
-      </h1>
-
-      <p class="hero-intro">
-        AIを導入するだけでは、会社は変わりません。
-      </p>
-
-      <p class="hero-description">
-        Web制作・EC運営・生成AI。<br class="d-none d-sm-inline">
-        現場を知るWebディレクターだからできる、<br class="d-none d-sm-inline">
-        成果につながるAI活用を伴走支援します。
-      </p>
-
-      <div class="hero-buttons">
-        <a class="btn btn-brand btn-lg" href="#contact">
-          無料相談する
-        </a>
-
-        <a class="btn btn-outline-brand btn-lg" href="#services">
-          サービスを見る
-          <span aria-hidden="true">→</span>
-        </a>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container-fluid site-container">
+        <div class="hero-content reveal is-visible">
+          <p class="eyebrow">AI STRATEGY PARTNER</p>
+          <h1 id="hero-title" class="hero-title">AIを、<br>使える武器に。</h1>
+          <p class="hero-copy">導入するだけで終わらせない。<br>業務と売上につながるAI活用を、現場から設計します。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">相談してみる <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#services">できることを見る <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
       </div>
+      <p class="hero-scroll" aria-hidden="true"><span></span>SCROLL</p>
+    </section>
 
-    </div>
-  </div>
-</section>
-
-
-    <!-- Area Features -->
-    <section
-      class="area-features"
-      aria-label="対応エリア"
-    >
-      <div class="container">
-        <div class="row g-0">
-
-          <div class="col-md-4">
-            <div class="area-feature">
-              <span class="area-feature-icon" aria-hidden="true">
-                ●
-              </span>
-
-              <span class="area-feature-text">
-                福岡県を拠点
-              </span>
-            </div>
+    <section class="area-strip" aria-label="対応エリア">
+      <div class="container-fluid site-container">
+        <div class="area-grid">
+          <div class="area-item reveal">
+            <p class="area-name">福岡</p>
+            <p class="area-detail">対面でご相談</p>
           </div>
-
-          <div class="col-md-4">
-            <div class="area-feature">
-              <span class="area-feature-icon" aria-hidden="true">
-                ●
-              </span>
-
-              <span class="area-feature-text">
-                九州全域訪問対応
-              </span>
-            </div>
+          <div class="area-item reveal" data-delay="80">
+            <p class="area-name">九州</p>
+            <p class="area-detail">訪問打ち合わせ対応</p>
           </div>
-
-          <div class="col-md-4">
-            <div class="area-feature">
-              <span class="area-feature-icon" aria-hidden="true">
-                ●
-              </span>
-
-              <span class="area-feature-text">
-                オンライン全国対応
-              </span>
-            </div>
+          <div class="area-item reveal" data-delay="160">
+            <p class="area-name">全国</p>
+            <p class="area-detail">オンライン対応</p>
           </div>
-
         </div>
       </div>
     </section>
 
-
-    <!-- Challenges -->
-<section id="challenges" class="challenges-section">
-  <div class="container">
-
-    <div class="section-heading text-center">
-      <p class="section-label">YOUR CHALLENGES</p>
-
-      <h2 class="section-title">
-        AI活用で、こんなお悩みありませんか？
-      </h2>
-
-      <p class="section-description">
-        AIに興味はあっても、何から始めればよいのか分からない。<br class="d-none d-md-inline">
-        そんな中小企業の課題を、実務に合わせて一緒に整理します。
-      </p>
-    </div>
-
-    <div class="row g-4 challenge-list">
-
-      <div class="col-md-6 col-lg-4">
-        <article class="challenge-card h-100">
-          <div class="challenge-number" aria-hidden="true">01</div>
-
-          <div class="challenge-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 24 24"
-              width="28"
-              height="28"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M12 3a6 6 0 0 0-3.5 10.9V17h7v-3.1A6 6 0 0 0 12 3Z"></path>
-              <path d="M9 21h6"></path>
-              <path d="M9 17h6"></path>
-            </svg>
-          </div>
-
-          <h3 class="challenge-title">
-            AIを何に使えばよいか<br>
-            分からない
-          </h3>
-
-          <p class="challenge-text">
-            自社のどの業務にAIを活用できるのか、具体的なイメージが持てない。
-          </p>
-        </article>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <article class="challenge-card h-100">
-          <div class="challenge-number" aria-hidden="true">02</div>
-
-          <div class="challenge-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 24 24"
-              width="28"
-              height="28"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M4 5h16v11H7l-3 3V5Z"></path>
-              <path d="M8 9h8"></path>
-              <path d="M8 12h5"></path>
-            </svg>
-          </div>
-
-          <h3 class="challenge-title">
-            ChatGPTを導入したが<br>
-            活用できていない
-          </h3>
-
-          <p class="challenge-text">
-            導入したものの、検索や文章作成以外の使い方が分からず定着していない。
-          </p>
-        </article>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <article class="challenge-card h-100">
-          <div class="challenge-number" aria-hidden="true">03</div>
-
-          <div class="challenge-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 24 24"
-              width="28"
-              height="28"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M4 19h16"></path>
-              <path d="M7 16v-5"></path>
-              <path d="M12 16V7"></path>
-              <path d="M17 16V4"></path>
-            </svg>
-          </div>
-
-          <h3 class="challenge-title">
-            毎日の業務を<br>
-            効率化したい
-          </h3>
-
-          <p class="challenge-text">
-            資料作成、メール対応、データ入力などの繰り返し作業に時間を取られている。
-          </p>
-        </article>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <article class="challenge-card h-100">
-          <div class="challenge-number" aria-hidden="true">04</div>
-
-          <div class="challenge-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 24 24"
-              width="28"
-              height="28"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <rect x="3" y="4" width="18" height="14" rx="2"></rect>
-              <path d="M8 21h8"></path>
-              <path d="M12 18v3"></path>
-              <path d="m8 12 2-2 2 2 4-4"></path>
-            </svg>
-          </div>
-
-          <h3 class="challenge-title">
-            Webサイトからの成果を<br>
-            改善したい
-          </h3>
-
-          <p class="challenge-text">
-            ホームページはあるものの、問い合わせや売上につながっている実感がない。
-          </p>
-        </article>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <article class="challenge-card h-100">
-          <div class="challenge-number" aria-hidden="true">05</div>
-
-          <div class="challenge-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 24 24"
-              width="28"
-              height="28"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="9" cy="20" r="1"></circle>
-              <circle cx="18" cy="20" r="1"></circle>
-              <path d="M3 4h2l2.4 10.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 7H6"></path>
-            </svg>
-          </div>
-
-          <h3 class="challenge-title">
-            EC運営の負担を減らし<br>
-            売上を伸ばしたい
-          </h3>
-
-          <p class="challenge-text">
-            商品登録、説明文、販促企画、分析など、運営業務が属人化している。
-          </p>
-        </article>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <article class="challenge-card h-100">
-          <div class="challenge-number" aria-hidden="true">06</div>
-
-          <div class="challenge-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 24 24"
-              width="28"
-              height="28"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M4 15V9"></path>
-              <path d="M8 18V6"></path>
-              <path d="M12 13V8"></path>
-              <path d="M16 17V4"></path>
-              <path d="M20 14v-3"></path>
-            </svg>
-          </div>
-
-          <h3 class="challenge-title">
-            SNSを継続的に<br>
-            運用できない
-          </h3>
-
-          <p class="challenge-text">
-            投稿企画や文章、動画構成を毎回考えることが負担になり、更新が止まってしまう。
-          </p>
-        </article>
-      </div>
-
-    </div>
-
-    <div class="challenge-solution text-center">
-      <p class="challenge-solution-label">
-        SSKSが一緒に整理します
-      </p>
-
-      <h3 class="challenge-solution-title">
-        その課題を、<span>AIとWebの両面</span>から解決します。
-      </h3>
-
-      <p class="challenge-solution-text">
-        最初から大規模なAIシステムを導入する必要はありません。<br class="d-none d-md-inline">
-        現在の業務を確認し、効果が見込めるところから段階的に始めます。
-      </p>
-
-      <a class="btn btn-brand" href="#contact">
-        まずは課題を相談する
-      </a>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- What AI Can Do -->
-<section id="services" class="ai-solutions-section">
-  <div class="container">
-
-    <div class="section-heading text-center">
-      <p class="section-label">
-        WHAT AI CAN DO
-      </p>
-
-      <h2 class="section-title">
-        AIで実現できること
-      </h2>
-
-      <p class="section-description">
-        AIは、文章を作るだけのツールではありません。<br class="d-none d-md-inline">
-        現在の業務と組み合わせることで、作業時間の削減や売上改善につなげられます。
-      </p>
-    </div>
-
-    <div class="row g-4 ai-solution-list">
-
-      <!-- 01 -->
-      <div class="col-md-6 col-lg-4">
-        <article class="ai-solution-card h-100">
-          <div class="ai-solution-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M4 4h16v12H7l-3 3V4Z"></path>
-              <path d="M8 8h8"></path>
-              <path d="M8 12h5"></path>
-            </svg>
-          </div>
-
-          <p class="ai-solution-category">
-            GENERATIVE AI
-          </p>
-
-          <h3 class="ai-solution-title">
-            文章・資料作成の効率化
-          </h3>
-
-          <p class="ai-solution-text">
-            メール、提案書、議事録、マニュアルなど、日常的な文章作成をAIで効率化します。
-          </p>
-
-          <ul class="ai-solution-points">
-            <li>メールや案内文の作成</li>
-            <li>提案書・資料の構成作成</li>
-            <li>会議内容の整理・要約</li>
-          </ul>
-        </article>
-      </div>
-
-      <!-- 02 -->
-      <div class="col-md-6 col-lg-4">
-        <article class="ai-solution-card h-100">
-          <div class="ai-solution-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M5 3h14v18H5z"></path>
-              <path d="M8 7h8"></path>
-              <path d="M8 11h8"></path>
-              <path d="M8 15h5"></path>
-            </svg>
-          </div>
-
-          <p class="ai-solution-category">
-            KNOWLEDGE
-          </p>
-
-          <h3 class="ai-solution-title">
-            社内情報の検索・共有
-          </h3>
-
-          <p class="ai-solution-text">
-            社内資料やマニュアルをAIから検索できる状態にし、必要な情報へすぐアクセスできるようにします。
-          </p>
-
-          <ul class="ai-solution-points">
-            <li>社内マニュアルの検索</li>
-            <li>よくある質問への自動回答</li>
-            <li>情報共有の属人化を軽減</li>
-          </ul>
-        </article>
-      </div>
-
-      <!-- 03 -->
-      <div class="col-md-6 col-lg-4">
-        <article class="ai-solution-card h-100">
-          <div class="ai-solution-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M4 7h16"></path>
-              <path d="M7 4v6"></path>
-              <path d="M17 4v6"></path>
-              <rect x="4" y="5" width="16" height="15" rx="2"></rect>
-              <path d="M8 14l2 2 5-5"></path>
-            </svg>
-          </div>
-
-          <p class="ai-solution-category">
-            AUTOMATION
-          </p>
-
-          <h3 class="ai-solution-title">
-            定型業務の自動化
-          </h3>
-
-          <p class="ai-solution-text">
-            複数のツールを連携し、転記・通知・集計などの繰り返し作業を自動化します。
-          </p>
-
-          <ul class="ai-solution-points">
-            <li>フォーム内容の自動整理</li>
-            <li>メールやSlackへの通知</li>
-            <li>データ入力・集計の自動化</li>
-          </ul>
-        </article>
-      </div>
-
-      <!-- 04 -->
-      <div class="col-md-6 col-lg-4">
-        <article class="ai-solution-card h-100">
-          <div class="ai-solution-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <rect x="3" y="4" width="18" height="15" rx="2"></rect>
-              <path d="M3 9h18"></path>
-              <path d="M8 15l2-2 2 2 4-4"></path>
-            </svg>
-          </div>
-
-          <p class="ai-solution-category">
-            WEB
-          </p>
-
-          <h3 class="ai-solution-title">
-            Webサイトの成果改善
-          </h3>
-
-          <p class="ai-solution-text">
-            AIによる分析とWeb制作の経験を組み合わせ、問い合わせや申込みにつながるサイトへ改善します。
-          </p>
-
-          <ul class="ai-solution-points">
-            <li>ページ構成・文章の改善</li>
-            <li>問い合わせ導線の見直し</li>
-            <li>アクセス情報の分析</li>
-          </ul>
-        </article>
-      </div>
-
-      <!-- 05 -->
-      <div class="col-md-6 col-lg-4">
-        <article class="ai-solution-card h-100">
-          <div class="ai-solution-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <circle cx="9" cy="20" r="1"></circle>
-              <circle cx="18" cy="20" r="1"></circle>
-              <path d="M3 4h2l2.4 10.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 7H6"></path>
-            </svg>
-          </div>
-
-          <p class="ai-solution-category">
-            E-COMMERCE
-          </p>
-
-          <h3 class="ai-solution-title">
-            EC運営と販促の支援
-          </h3>
-
-          <p class="ai-solution-text">
-            商品登録や説明文、販促企画、データ分析など、EC運営の実務をAIで効率化します。
-          </p>
-
-          <ul class="ai-solution-points">
-            <li>商品名・説明文の作成</li>
-            <li>販促企画・特集案の作成</li>
-            <li>売上データの整理・分析</li>
-          </ul>
-        </article>
-      </div>
-
-      <!-- 06 -->
-      <div class="col-md-6 col-lg-4">
-        <article class="ai-solution-card h-100">
-          <div class="ai-solution-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M4 17V7"></path>
-              <path d="M8 14V4"></path>
-              <path d="M12 19V9"></path>
-              <path d="M16 15V6"></path>
-              <path d="M20 12V3"></path>
-            </svg>
-          </div>
-
-          <p class="ai-solution-category">
-            MARKETING
-          </p>
-
-          <h3 class="ai-solution-title">
-            SNS・コンテンツ運用
-          </h3>
-
-          <p class="ai-solution-text">
-            投稿企画から文章、動画構成、振り返りまで、継続的な情報発信をAIで支援します。
-          </p>
-
-          <ul class="ai-solution-points">
-            <li>SNS投稿企画の作成</li>
-            <li>動画構成・テロップ作成</li>
-            <li>投稿結果の分析・改善</li>
-          </ul>
-        </article>
-      </div>
-
-    </div>
-
-    <div class="ai-solutions-message">
-      <div class="row align-items-center g-4">
-
-        <div class="col-lg-8">
-          <p class="ai-solutions-message-label">
-            START SMALL
-          </p>
-
-          <h3 class="ai-solutions-message-title">
-            必要なところから、小さく始められます。
-          </h3>
-
-          <p class="ai-solutions-message-text">
-            すべてを一度に変えるのではなく、効果が見込める業務を選び、
-            実際に使いながら改善していきます。
-          </p>
-        </div>
-
-        <div class="col-lg-4 text-lg-end">
-          <a class="btn btn-brand" href="#contact">
-            自社でできることを相談する
-          </a>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<section class="challenges-section">
-  <div class="container">
-
-    <div class="section-heading text-center">
-      <span class="section-label">CHALLENGES</span>
-
-      <h2 class="section-title">
-        AIを活用したい。<br class="d-md-none">
-        でも、何から始めればいいか分からない。
-      </h2>
-
-      <p class="section-description">
-        生成AIの導入や業務改善について、こんなお悩みはありませんか？
-      </p>
-    </div>
-
-    <div class="row g-4 challenge-list">
-
-      <div class="col-md-6 col-xl-3">
-        <div class="challenge-card">
-          <span class="challenge-number">01</span>
-
-          <div class="challenge-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M9.1 9a3 3 0 1 1 5.8 1c-.8 1.2-2.9 1.6-2.9 3"></path>
-              <path d="M12 17h.01"></path>
-            </svg>
-          </div>
-
-          <h3 class="challenge-title">
-            何から始めれば<br>
-            いいか分からない
-          </h3>
-
-          <p class="challenge-text">
-            ChatGPTなどを試してみたものの、自社の業務にどう活用すればよいか分からない。
-          </p>
+    <section class="statement-section">
+      <div class="container-fluid site-container">
+        <div class="statement-wrap reveal">
+          <p class="eyebrow">OUR PURPOSE</p>
+          <h2 class="statement-title">業務を、<br>もっとシンプルに。</h2>
+          <p class="statement-text">AIは、特別な会社だけのものではありません。<br>日々の小さな負担を減らし、本来の仕事に集中するための道具です。</p>
         </div>
       </div>
+    </section>
 
-      <div class="col-md-6 col-xl-3">
-        <div class="challenge-card">
-          <span class="challenge-number">02</span>
+    <section id="challenges" class="challenge-section section-dark">
+      <div class="container-fluid site-container">
+        <div class="challenge-intro reveal">
+          <p class="eyebrow eyebrow-light">YOUR CHALLENGES</p>
+          <h2 class="section-title section-title-light">こんな状態を、<br>そのままにしない。</h2>
+        </div>
 
-          <div class="challenge-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-              <path d="M8 8h8"></path>
-              <path d="M8 12h5"></path>
-              <path d="M8 16h3"></path>
-            </svg>
-          </div>
-
-          <h3 class="challenge-title">
-            毎日の定型業務に<br>
-            時間を取られている
-          </h3>
-
-          <p class="challenge-text">
-            情報整理や文章作成、データ入力などの繰り返し作業を効率化したい。
-          </p>
+        <div class="challenge-lines">
+          <article class="challenge-line reveal">
+            <span class="challenge-index">01</span>
+            <h3>何から始めればいい？</h3>
+          </article>
+          <article class="challenge-line reveal">
+            <span class="challenge-index">02</span>
+            <h3>毎日の作業が多すぎる。</h3>
+          </article>
+          <article class="challenge-line reveal">
+            <span class="challenge-index">03</span>
+            <h3>Webが成果につながらない。</h3>
+          </article>
+          <article class="challenge-line reveal">
+            <span class="challenge-index">04</span>
+            <h3>相談できる相手がいない。</h3>
+          </article>
         </div>
       </div>
+    </section>
 
-      <div class="col-md-6 col-xl-3">
-        <div class="challenge-card">
-          <span class="challenge-number">03</span>
-
-          <div class="challenge-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M4 19V9"></path>
-              <path d="M10 19V5"></path>
-              <path d="M16 19v-7"></path>
-              <path d="M22 19V3"></path>
-            </svg>
-          </div>
-
-          <h3 class="challenge-title">
-            WebやECの成果が<br>
-            伸び悩んでいる
-          </h3>
-
-          <p class="challenge-text">
-            サイトやECを運営しているが、更新作業や集客施策が属人的になっている。
-          </p>
+    <section class="bridge-section">
+      <div class="container-fluid site-container">
+        <div class="bridge-copy reveal">
+          <p class="eyebrow">THE ANSWER</p>
+          <h2 class="bridge-title">だから、<br><span>SSKS</span>がいます。</h2>
         </div>
       </div>
+    </section>
 
-      <div class="col-md-6 col-xl-3">
-        <div class="challenge-card">
-          <span class="challenge-number">04</span>
-
-          <div class="challenge-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M12 2a4 4 0 0 0-4 4v1a4 4 0 0 0-2 3.5A4 4 0 0 0 8 14v1a4 4 0 0 0 4 4"></path>
-              <path d="M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1 2 3.5A4 4 0 0 1 16 14v1a4 4 0 0 1-4 4"></path>
-              <path d="M12 2v20"></path>
-            </svg>
+    <section id="services" class="services-section">
+      <div class="container-fluid site-container">
+        <div class="section-header reveal">
+          <div>
+            <p class="eyebrow">SERVICES</p>
+            <h2 class="section-title">考えるところから、<br>実装・運用まで。</h2>
           </div>
+          <p class="section-lead">課題を聞き、必要なものだけを選びます。<br>AIありきではなく、成果から逆算します。</p>
+        </div>
 
-          <h3 class="challenge-title">
-            相談できる専門家が<br>
-            社内にいない
-          </h3>
+        <div class="service-list">
+          <article class="service-item reveal">
+            <div class="service-number">01</div>
+            <div class="service-main">
+              <p class="service-en">AI IMPLEMENTATION</p>
+              <h3>AI導入・業務改善</h3>
+            </div>
+            <p class="service-copy">業務整理、活用方針、仕組みづくりまで。</p>
+            <span class="service-arrow" aria-hidden="true">↗</span>
+          </article>
 
-          <p class="challenge-text">
-            AIやWebに詳しい担当者がおらず、判断や実行を任せられる相手が必要。
-          </p>
+          <article class="service-item reveal">
+            <div class="service-number">02</div>
+            <div class="service-main">
+              <p class="service-en">WEB DEVELOPMENT</p>
+              <h3>Web制作・改善</h3>
+            </div>
+            <p class="service-copy">見た目だけで終わらない、成果につながるWebへ。</p>
+            <span class="service-arrow" aria-hidden="true">↗</span>
+          </article>
+
+          <article class="service-item reveal">
+            <div class="service-number">03</div>
+            <div class="service-main">
+              <p class="service-en">EC GROWTH SUPPORT</p>
+              <h3>EC運営支援</h3>
+            </div>
+            <p class="service-copy">商品登録から販促、運用改善まで伴走します。</p>
+            <span class="service-arrow" aria-hidden="true">↗</span>
+          </article>
         </div>
       </div>
+    </section>
 
-    </div>
+    <section id="about" class="about-section">
+      <div class="container-fluid site-container">
+        <div class="about-grid">
+          <div class="about-brand reveal">
+            <p class="eyebrow">ABOUT SSKS</p>
+            <p class="about-mark">SSKS</p>
+            <p class="about-sub">AI Strategy Partner</p>
+          </div>
+          <div class="about-message reveal">
+            <h2>現場を知る人間が、<br>最後まで伴走する。</h2>
+            <p>Web制作、EC運営、業務改善。実務の中で培った経験をもとに、AIを「使える形」に落とし込みます。大きなシステムを売るのではなく、今の会社に必要な一歩から一緒に始めます。</p>
+            <p class="about-signature">代表　川野 倫太郎</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="challenges-message text-center">
-      <p>
-        SSKSは、AIの導入だけを目的にせず、<br class="d-none d-md-block">
-        <strong>実際の業務や売上につながる活用方法</strong>を一緒に考えます。
-      </p>
-    </div>
+    <section class="flow-section">
+      <div class="container-fluid site-container">
+        <div class="section-header reveal">
+          <div>
+            <p class="eyebrow">HOW WE WORK</p>
+            <h2 class="section-title">まずは、話すところから。</h2>
+          </div>
+        </div>
 
-  </div>
-</section>
+        <ol class="flow-list">
+          <li class="flow-item reveal"><span>01</span><p>相談</p></li>
+          <li class="flow-item reveal"><span>02</span><p>ヒアリング</p></li>
+          <li class="flow-item reveal"><span>03</span><p>ご提案</p></li>
+          <li class="flow-item reveal"><span>04</span><p>実装・伴走</p></li>
+        </ol>
+      </div>
+    </section>
 
+    <section id="contact" class="contact-section">
+      <div class="container-fluid site-container">
+        <div class="contact-grid">
+          <div class="contact-copy reveal">
+            <p class="eyebrow eyebrow-light">CONTACT</p>
+            <h2>今のお悩みを、<br>聞かせてください。</h2>
+            <p>相談内容が固まっていなくても大丈夫です。<br>現状をお聞きし、次に考えるべきことを一緒に整理します。</p>
+            <a class="contact-email" href="mailto:rintaro@ssks.work">rintaro@ssks.work <span aria-hidden="true">↗</span></a>
+          </div>
 
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-row">
+              <label for="name">お名前 <span>必須</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="form-row">
+              <label for="company">会社名 <small>任意</small></label>
+              <input id="company" name="company" type="text" autocomplete="organization">
+            </div>
+            <div class="form-row">
+              <label for="email">メールアドレス <span>必須</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="form-row">
+              <label for="message">相談内容 <span>必須</span></label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <p class="form-note">送信ボタンを押すと、入力内容を反映したメール作成画面が開きます。</p>
+            <button class="button button-light" type="submit">相談内容を送る <span aria-hidden="true">→</span></button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <footer class="site-footer">
+    <div class="container-fluid site-container footer-inner">
+      <div>
+        <img class="footer-logo" src="./assets/img/logo.png" alt="SSKS AI Strategy Partner" width="190" height="61">
+        <p>福岡県糟屋郡粕屋町を拠点に、九州・全国へ対応。</p>
+      </div>
+      <div class="footer-meta">
+        <a href="mailto:rintaro@ssks.work">rintaro@ssks.work</a>
+        <p>© <span id="currentYear"></span> SSKS</p>
+      </div>
+    </div>
+  </footer>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"
-  ></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 </html>
