@@ -249,3 +249,33 @@ button, input, textarea { font: inherit; }
   .hero-enter-left,
   .hero-enter-up { opacity: 1; animation: none !important; transform: none; }
 }
+
+/* Contact form utilities */
+.form-honeypot {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.form-privacy {
+  margin: -0.35rem 0 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.form-privacy a {
+  color: #fff;
+  text-underline-offset: 0.2em;
+}
+
+.contact-form button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}

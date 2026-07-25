@@ -42,38 +42,48 @@
     });
   });
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', (event) => {
-      event.preventDefault();
+  if (!contactForm) return;
 
-      if (!contactForm.checkValidity()) {
-        contactForm.classList.add('was-validated');
-        if (formStatus) formStatus.textContent = '必須項目をご確認ください。';
-        const firstInvalid = contactForm.querySelector(':invalid');
-        firstInvalid?.focus();
-        return;
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    if (!contactForm.checkValidity()) {
+      contactForm.classList.add('was-validated');
+      if (formStatus) formStatus.textContent = '必須項目をご確認ください。';
+      contactForm.querySelector(':invalid')?.focus();
+      return;
+    }
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonHtml = submitButton?.innerHTML;
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = '送信中…';
+    }
+    if (formStatus) formStatus.textContent = 'お問い合わせを送信しています。';
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(contactForm)
+      });
+
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.message || '送信に失敗しました。');
+
+      contactForm.reset();
+      contactForm.classList.remove('was-validated');
+      if (formStatus) formStatus.textContent = '送信しました。3営業日以内を目安にご連絡します。';
+    } catch (error) {
+      if (formStatus) {
+        formStatus.textContent = `${error.message || '送信に失敗しました。'} お急ぎの場合は info@ssks.work へ直接ご連絡ください。`;
       }
-
-      const formData = new FormData(contactForm);
-      const name = String(formData.get('name') || '').trim();
-      const company = String(formData.get('company') || '').trim();
-      const email = String(formData.get('email') || '').trim();
-      const message = String(formData.get('message') || '').trim();
-
-      const subject = `【SSKSサイト】${name}様からのご相談`;
-      const body = [
-        'SSKS Webサイトからのご相談',
-        '',
-        `お名前：${name}`,
-        `会社名：${company || '未入力'}`,
-        `メールアドレス：${email}`,
-        '',
-        '相談内容：',
-        message
-      ].join('\n');
-
-      if (formStatus) formStatus.textContent = 'メール作成画面を開きます。';
-      window.location.href = `mailto:rintaro@ssks.work?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    });
-  }
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonHtml;
+      }
+    }
+  });
 })();
