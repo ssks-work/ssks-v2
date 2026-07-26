@@ -154,8 +154,18 @@ button, input, textarea { font: inherit; }
 .form-row input:focus, .form-row textarea:focus { border-color: var(--white); }
 .form-row textarea { resize: vertical; }
 .form-note { margin: -.5rem 0 1.5rem; color: rgba(255,255,255,.78); font-size: .9rem; }
-.button-light { color: var(--black); background: var(--white); }
-.button-light:hover { color: var(--red); background: #f8f8f8; transform: translateY(-2px); }
+.button-light {
+  color: var(--white);
+  background: transparent;
+  border: 1px solid var(--white);
+}
+
+.button-light:hover {
+  color: var(--red);
+  background: var(--white);
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
 .form-status { min-height: 1.8em; margin: 1rem 0 0; font-size: .78rem; }
 
 .site-footer { padding: 3.5rem 0; background: var(--black); color: rgba(255,255,255,.65); }
