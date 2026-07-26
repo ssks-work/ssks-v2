@@ -13,10 +13,18 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: var(--header-height); }
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
 body {
   width: 100%;
+  max-width: 100%;
   margin: 0;
+  overflow-x: hidden;
   color: var(--ink);
   background: var(--white);
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
@@ -244,6 +252,21 @@ button, input, textarea { font: inherit; }
   .service-item:hover { padding-inline: 0; }
   .contact-copy h2 { font-size: clamp(1.95rem, 8.8vw, 3.8rem); }
   .contact-copy h2 .title-line { max-width: 100%; white-space: nowrap; }
+
+  /* 長い見出しが画面幅を押し広げないようにする */
+  .about-message h2 .title-line {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .about-brand,
+  .about-message,
+  .contact-copy,
+  .contact-form,
+  .service-main,
+  .section-header > * {
+    min-width: 0;
+  }
 }
 
 @media (max-width: 390px) {
