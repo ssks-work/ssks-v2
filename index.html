@@ -10,7 +10,7 @@
 <title>生成AI導入支援・業務改善・Web制作｜SSKS（福岡）</title>
 <link href="https://cdn.jsdelivr.net" rel="preconnect"/>
 <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" rel="stylesheet"/>
-<link href="./assets/css/style.css?v=20260726-4" rel="stylesheet"/>
+<link href="./assets/css/style.css?v=20260726-5" rel="stylesheet"/>
 <link as="image" href="./assets/img/hero.webp" rel="preload" type="image/webp"/>
 
 
@@ -320,5 +320,49 @@
 </footer>
 <script crossorigin="anonymous" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector("[data-header]");
+  const menu = document.getElementById("globalNavigation");
+  const toggler = document.querySelector(".navbar-toggler");
+
+  if (!menu || !toggler) return;
+
+  const setMenuState = function (isOpen) {
+    document.body.classList.toggle("menu-open", isOpen);
+    toggler.setAttribute("aria-expanded", String(isOpen));
+  };
+
+  menu.addEventListener("show.bs.collapse", function () {
+    setMenuState(true);
+  });
+
+  menu.addEventListener("hidden.bs.collapse", function () {
+    setMenuState(false);
+  });
+
+  menu.querySelectorAll("a[href^='#']").forEach(function (link) {
+    link.addEventListener("click", function () {
+      const instance = bootstrap.Collapse.getOrCreateInstance(menu, { toggle: false });
+      instance.hide();
+    });
+  });
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth >= 992 && menu.classList.contains("show")) {
+      const instance = bootstrap.Collapse.getOrCreateInstance(menu, { toggle: false });
+      instance.hide();
+    }
+  });
+
+  if (header) {
+    const updateHeader = function () {
+      header.classList.toggle("is-scrolled", window.scrollY > 24);
+    };
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+  }
+});
+</script>
 </body>
 </html>
