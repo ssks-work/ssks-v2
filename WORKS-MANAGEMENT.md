@@ -1,40 +1,37 @@
-# 実績の更新方法
+# 実績ページの更新方法（HTMLだけで運用）
 
-実績データは `assets/data/works.json` のみで管理します。
+## 新しい実績を追加する
 
-## 反映先
+1. `works/work-template.html` をコピーします。
+2. 例：`works/kotty-ec-support.html` のような英数字ファイル名に変更します。
+3. HTML上部の `WORK DATA` 内にある `<meta>` の `content` を編集します。
+4. 本文、画像、タイトルを通常のHTMLとして編集します。
+5. 公開・デプロイ時に `npm run build` を実行します。
 
-- `index.html`：`featured: true` の公開実績を先頭から3件表示
-- `works.html`：`published: false` 以外をすべて表示
+これで `assets/data/works.json` が自動生成され、トップページとWORK一覧へ反映されます。
+`works.json` を直接編集する必要はありません。
 
-## 追加手順
+## Cloudflare Pagesの設定（初回だけ）
 
-1. `work-detail-template.html` を複製し、実績詳細ページを作成します。
-2. `assets/data/works.json` の配列先頭に新しい実績を追加します。
-3. 画像を使う場合は `assets/img/` に配置し、`image` にパスを入力します。
-4. トップにも表示する場合は `featured` を `true` にします。
-5. 一時的に非公開にする場合は `published` を `false` にします。
+- Build command：`npm run build`
+- Build output directory：サイトの現在の公開ディレクトリ（通常は `/` または未指定）
 
-## データ例
+GitHub連携では、以後HTMLを追加してpushするだけで自動生成されます。
 
-```json
-{
-  "id": "project-name",
-  "title": "実績タイトル",
-  "category": "web",
-  "categoryLabel": "WEB DESIGN",
-  "year": "2026",
-  "summary": "担当範囲や成果の要約",
-  "url": "./work-project-name.html",
-  "image": "./assets/img/work-project-name.webp",
-  "imageAlt": "実績の画面イメージ",
-  "featured": true,
-  "published": true
-}
-```
+## WORK DATAの意味
 
-カテゴリーは `web`、`ec`、`ai` を使用すると、一覧ページの絞り込みに対応します。
+- `work:title`：実績名
+- `work:category`：`web` / `ec` / `ai`
+- `work:category-label`：一覧に表示する英字ラベル
+- `work:year`：年
+- `work:summary`：一覧用説明文
+- `work:image`：一覧画像。詳細ページが `works/` 内なので `../assets/img/works/画像名.webp` と記載
+- `work:featured`：`true` でトップにも表示
+- `work:published`：`false` でトップ・一覧から非表示
+- `work:order`：数字が大きいほど先に表示
 
-## 注意
+## 画像
 
-`works.json` はブラウザの `fetch()` で読み込むため、HTMLファイルを直接ダブルクリックした `file://` 表示では読み込めない場合があります。Cloudflare Pagesなどの公開環境、またはローカルサーバーで確認してください。
+一覧画像はCSSで `object-fit: cover` されます。推奨は **1600×1000px（16:10）** です。
+異なる比率でも表示できますが、上下または左右が自動的にトリミングされます。
+詳細ページのメイン画像は **1600×800px（2:1）**、ギャラリー画像は **1600×1200px（4:3）** が推奨です。

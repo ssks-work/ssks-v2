@@ -23,3 +23,7 @@ Workers & Pages → 対象プロジェクト → Settings → Variables and Secr
 4. Bing Webmaster Toolsへ登録（Search Consoleからインポート可）
 5. GA4を作成する場合は測定IDを取得し、Googleタグをhead内へ追加
 6. フォームを実際に送信し、info@ssks.workへの到着と返信先を確認
+
+
+## 実績データの自動生成
+公開前に `npm run build` を実行してください。Cloudflare Pagesでは Build command に同じコマンドを設定します。
