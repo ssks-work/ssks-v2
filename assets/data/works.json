@@ -1,0 +1,41 @@
+[
+  {
+    "id": "sample-web",
+    "title": "実績タイトルを入力",
+    "category": "web",
+    "categoryLabel": "WEB DESIGN",
+    "year": "2026",
+    "summary": "担当範囲や成果を2〜3行で簡潔に入力します。",
+    "url": "./work-detail-template.html",
+    "image": "./assets/img/work-sample.jpg",
+    "imageAlt": "実績名の画面イメージ",
+    "featured": true,
+    "published": true
+  },
+  {
+    "id": "sample-ec",
+    "title": "EC運営支援の実績例",
+    "category": "ec",
+    "categoryLabel": "EC OPERATION",
+    "year": "2026",
+    "summary": "支援内容、期間、改善したポイントを記載します。",
+    "url": "./work-detail-template.html",
+    "image": "",
+    "placeholder": "EC SUPPORT",
+    "featured": true,
+    "published": true
+  },
+  {
+    "id": "sample-ai",
+    "title": "生成AI・業務改善の実績例",
+    "category": "ai",
+    "categoryLabel": "AI IMPLEMENTATION",
+    "year": "2026",
+    "summary": "導入前の課題、実施内容、導入後の変化を記載します。",
+    "url": "./work-detail-template.html",
+    "image": "",
+    "placeholder": "AI / DX",
+    "featured": true,
+    "published": true
+  }
+]
