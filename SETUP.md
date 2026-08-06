@@ -27,3 +27,7 @@ Workers & Pages → 対象プロジェクト → Settings → Variables and Secr
 
 ## 実績データの自動生成
 公開前に `npm run build` を実行してください。Cloudflare Pagesでは Build command に同じコマンドを設定します。
+
+
+## 料金ページ
+`price.html` に月額プランを掲載しています。金額・作業時間・対象範囲は公開前に実運用に合わせて調整してください。
