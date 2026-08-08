@@ -1,47 +1,17 @@
 [
   {
-    "id": "sample-web",
-    "title": "実績タイトルを入力",
+    "id": "work-riastar",
+    "title": "ホームページリニューアル＆公式LINE開設",
     "category": "web",
     "categoryLabel": "WEB DESIGN",
     "year": "2026",
-    "summary": "担当範囲や成果を2〜3行で簡潔に入力します。",
-    "url": "./works/sample-web.html",
-    "image": "./assets/img/works/sample-web.webp",
-    "imageAlt": "実績タイトルを入力の画面イメージ",
+    "summary": "クライアントの意向をヒアリングし、公式LINEへ誘導するホームページにリニューアルしました。また、公式LINEの開設とリッチメニューや問い合わせフォーム、自動応答メッセージの設定等行いました。",
+    "url": "./works/work-riastar.html",
+    "image": "./assets/img/works/riastar.png",
+    "imageAlt": "riastar.jpのHPスクリーンショット",
     "placeholder": "WEB DESIGN",
     "featured": true,
     "published": true,
     "order": 100
-  },
-  {
-    "id": "sample-ec",
-    "title": "EC運営支援の実績例",
-    "category": "ec",
-    "categoryLabel": "EC OPERATION",
-    "year": "2026",
-    "summary": "支援内容、期間、改善したポイントを記載します。",
-    "url": "./works/sample-ec.html",
-    "image": "",
-    "imageAlt": "EC運営支援の実績例の画面イメージ",
-    "placeholder": "EC OPERATION",
-    "featured": true,
-    "published": true,
-    "order": 90
-  },
-  {
-    "id": "sample-ai",
-    "title": "生成AI・業務改善の実績例",
-    "category": "ai",
-    "categoryLabel": "AI IMPLEMENTATION",
-    "year": "2026",
-    "summary": "導入前の課題、実施内容、導入後の変化を記載します。",
-    "url": "./works/sample-ai.html",
-    "image": "",
-    "imageAlt": "生成AI・業務改善の実績例の画面イメージ",
-    "placeholder": "AI IMPLEMENTATION",
-    "featured": true,
-    "published": true,
-    "order": 80
   }
 ]

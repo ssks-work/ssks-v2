@@ -3,7 +3,9 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const worksDir = path.join(root, 'works');
-const output = path.join(root, 'assets', 'data', 'works.json');
+const worksOutput = path.join(root, 'assets', 'data', 'works.json');
+const sitemapOutput = path.join(root, 'sitemap.xml');
+const baseUrl = 'https://ssks.work';
 
 const decode = (value = '') => value
   .replace(/&quot;/g, '"')
@@ -24,6 +26,13 @@ const readMeta = (html, name) => {
   }
   return '';
 };
+
+const xmlEscape = (value = '') => String(value)
+  .replace(/&/g, '&amp;')
+  .replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;')
+  .replace(/'/g, '&apos;');
 
 if (!fs.existsSync(worksDir)) fs.mkdirSync(worksDir, { recursive: true });
 
@@ -56,6 +65,31 @@ const works = files.map((file) => {
 }).filter(Boolean)
   .sort((a, b) => b.order - a.order || String(b.year).localeCompare(String(a.year)));
 
-fs.mkdirSync(path.dirname(output), { recursive: true });
-fs.writeFileSync(output, JSON.stringify(works, null, 2) + '\n');
-console.log(`Generated ${path.relative(root, output)} from ${works.length} work HTML file(s).`);
+const publishedWorks = works.filter((work) => work.published !== false);
+
+fs.mkdirSync(path.dirname(worksOutput), { recursive: true });
+fs.writeFileSync(worksOutput, JSON.stringify(publishedWorks, null, 2) + '\n');
+console.log(`Generated ${path.relative(root, worksOutput)} with ${publishedWorks.length} published work(s) (${works.length - publishedWorks.length} draft/sample excluded).`);
+
+const staticUrls = [
+  ['/', 'monthly', '1.0'],
+  ['/about.html', 'monthly', '0.8'],
+  ['/service.html', 'monthly', '0.9'],
+  ['/service-ai.html', 'monthly', '0.8'],
+  ['/service-web.html', 'monthly', '0.8'],
+  ['/service-ec.html', 'monthly', '0.8'],
+  ['/price.html', 'monthly', '0.9'],
+  ['/works.html', 'weekly', '0.8'],
+  ['/privacy.html', 'yearly', '0.3']
+];
+
+const workUrls = publishedWorks.map((work) => [
+  work.url.replace(/^\./, ''),
+  'monthly',
+  '0.7'
+]);
+
+const allUrls = [...staticUrls, ...workUrls];
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${allUrls.map(([url, changefreq, priority]) => `  <url>\n    <loc>${xmlEscape(baseUrl + url)}</loc>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`).join('\n')}\n</urlset>\n`;
+fs.writeFileSync(sitemapOutput, sitemap);
+console.log(`Generated ${path.relative(root, sitemapOutput)} with ${allUrls.length} URL(s).`);

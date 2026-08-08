@@ -26,7 +26,7 @@ Workers & Pages → 対象プロジェクト → Settings → Variables and Secr
 
 
 ## 実績データの自動生成
-公開前に `npm run build` を実行してください。Cloudflare Pagesでは Build command に同じコマンドを設定します。
+Cloudflare Pages の Build command を `npm run build` に設定してください。以後は実績HTMLを追加してGitHubへPushするだけで、実績一覧データと sitemap.xml が自動生成されます。
 
 
 ## 料金ページ
